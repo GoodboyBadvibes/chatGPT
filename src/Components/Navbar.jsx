@@ -1,5 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
+import { Navigate } from 'react-router-dom'
+import Login from '../Pages/login'
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -11,6 +14,11 @@ const Navbar = () => {
     }else{
       setNavMenu(false)
     }
+  }
+
+  const navigate = useNavigate()
+  const logout=()=>{
+    navigate('/login')
   }
   return (
     <>
@@ -24,7 +32,7 @@ const Navbar = () => {
          <i  className="ri-notification-3-line"></i>
          {navMenu&&(
           <div className='notificationMenu'>
-           <p>Log out</p>
+           <p onClick={logout}>Log out</p>
            <p>Go premium</p>
            <p>About</p>
          </div> 
