@@ -51,7 +51,7 @@ const Login = props => {
    }else{
     setLoading(true)
     setTimeout(() => {
-      navigate('/')
+      navigate('/home')
     }, 4000);
    }
   }

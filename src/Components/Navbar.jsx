@@ -18,7 +18,7 @@ const Navbar = () => {
 
   const navigate = useNavigate()
   const logout=()=>{
-    navigate('/login')
+    navigate('/')
   }
   return (
     <>
