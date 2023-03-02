@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-import { Navigate } from 'react-router-dom'
-import Login from '../Pages/login'
+// import { Navigate } from 'react-router-dom'
+// import Login from '../Pages/login'
 import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
