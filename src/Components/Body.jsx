@@ -3,16 +3,20 @@ import Ad from './Ad'
 import Gossips from './Gossips'
 import Meme from './Meme'
 import Welcome from './Welcome'
+import { useState } from 'react'
  
 
-const Body = () => {
+const Body = ({isLoading}) => {
+
+  console.log(isLoading)
+
   return (
    <>
      <div className='body'>
-      <Welcome/>
+      <Welcome isLoading={isLoading}/>
       <Gossips/>
-      <Ad/>
-      <Meme/>
+      <Ad isLoading={isLoading}/>
+      <Meme isLoading={isLoading}/>
       
      </div>
    </>

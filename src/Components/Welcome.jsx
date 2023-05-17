@@ -1,13 +1,19 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
 
-const Welcome = () => {
+const Welcome = ({isLoading}) => {
 
  const [welcome, setWelcome] = useState("")
 
- setTimeout(() => {
+//  setTimeout(() => {
+//     setWelcome('removeWelcome')
+//  }, 5000);
+
+useEffect(() => {
+  if(isLoading===false){
     setWelcome('removeWelcome')
- }, 5000);
+  }}, [isLoading])
+
 
   return (
     <>

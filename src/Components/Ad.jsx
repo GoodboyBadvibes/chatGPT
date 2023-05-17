@@ -1,13 +1,18 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
-const Ad = () => {
+
+const Ad = ({isLoading}) => {
 
  const [ad,setAd]= useState("adNone")
 
- setTimeout(() => {
-  setAd("adDis")
- }, 9000)
+useEffect(() => {
+  if(isLoading===false){
+    setTimeout(() => {
+      setAd("adDis")
+     }, 5000)     
+  }}, [isLoading])
+  console.log(isLoading)
 
  setTimeout(() => {
   console.log(ad)

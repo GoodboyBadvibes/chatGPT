@@ -33,6 +33,7 @@ const Login = props => {
     e.preventDefault()
     if(email === ''){
        setError('input field is empty')
+      //  M.toast({html:'input field is empty'})
     }else{
       setLoading(true)
       setTimeout(() => {
